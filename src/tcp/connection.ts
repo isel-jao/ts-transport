@@ -1,5 +1,5 @@
 import net from "node:net";
-import { FrameDecoder, encodeFrame } from "../framing.js";
+import { FrameDecoder, encodeFrame } from "./framing.js";
 import type { Connection, JsonValue } from "../types.js";
 
 export class TcpConnection implements Connection {

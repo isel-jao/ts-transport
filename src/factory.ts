@@ -3,7 +3,7 @@ import { TcpServer } from "./tcp/server.js";
 import { TcpRawClient } from "./tcp/client.js";
 import { WsServer } from "./ws/server.js";
 import { WsRawClient } from "./ws/client.js";
-import { ReconnectingClient } from "./reconnect.js";
+import { ReconnectingClient } from "./reconnect/index.js";
 
 export function createServer(options: ServerOptions): Server {
   if (options.protocol === "tcp") return new TcpServer(options);

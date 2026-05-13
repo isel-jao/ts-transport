@@ -1,6 +1,6 @@
 import { afterEach, expect, it } from "vitest";
-import { createClient, createServer } from "../src/index.js";
-import type { Client, JsonValue, Server } from "../src/types.js";
+import { createClient, createServer } from "../index.js";
+import type { Client, JsonValue, Server } from "../types.js";
 
 // Fast reconnect options used across all reconnect tests.
 // jitter:false makes delays deterministic: 50ms, 100ms, 200ms (capped), ...

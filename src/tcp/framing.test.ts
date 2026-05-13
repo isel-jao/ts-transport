@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { FrameDecoder, encodeFrame } from "../src/framing.js";
+import { FrameDecoder, encodeFrame } from "./framing.js";
 
 describe("encodeFrame", () => {
   it("writes 4-byte big-endian length then JSON payload", () => {

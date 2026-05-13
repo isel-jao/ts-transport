@@ -11,7 +11,12 @@ export class WsConnection implements Connection {
     socket.on("message", (data) => {
       let msg: JsonValue;
       try {
-        msg = JSON.parse(data.toString()) as JsonValue;
+        const raw = Array.isArray(data)
+          ? Buffer.concat(data).toString("utf8")
+          : Buffer.isBuffer(data)
+          ? data.toString("utf8")
+          : Buffer.from(data).toString("utf8");
+        msg = JSON.parse(raw) as JsonValue;
       } catch (e) {
         this.onErrorCb?.(new Error(`JSON parse error: ${String(e)}`));
         return;

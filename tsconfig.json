@@ -29,5 +29,5 @@
     "forceConsistentCasingInFileNames": true // catch case-insensitive import mismatches on Mac/Windows
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist", "tests"]
+  "exclude": ["node_modules", "dist", "tests", "src/**/*.test.ts"]
 }

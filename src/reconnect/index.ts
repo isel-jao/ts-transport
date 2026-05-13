@@ -1,4 +1,4 @@
-import type { Client, Connection, JsonValue, ReconnectOptions } from "./types.js";
+import type { Client, Connection, JsonValue, ReconnectOptions } from "../types.js";
 
 interface RawConnector {
   connect(): Promise<Connection>;
