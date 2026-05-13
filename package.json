@@ -10,9 +10,8 @@
   ],
   "scripts": {
     "build": "tsc",
-    "example:tcp": "tsx examples/ping-tcp.ts",
-    "example:ws": "tsx examples/ping-ws.ts",
-    "example:reconnect": "tsx examples/reconnect.ts"
+    "test": "vitest",
+    "test:run": "vitest run"
   },
   "dependencies": {
     "ws": "^8.18.0"
@@ -21,6 +20,7 @@
     "@types/node": "^22.0.0",
     "@types/ws": "^8.5.13",
     "tsx": "^4.19.0",
-    "typescript": "^5.7.0"
+    "typescript": "^5.7.0",
+    "vitest": "^4.1.6"
   }
 }
