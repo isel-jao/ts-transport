@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    // Language & target
+    "target": "ES2022", // compiled JS uses ES2022 features (top-level await, class fields, etc.)
+
+    // Module system
+    "module": "NodeNext", // emit ESM with .js extensions, honour package.json "exports"
+    "moduleResolution": "NodeNext", // resolve imports the same way Node 18+ does
+    "esModuleInterop": true, // allow default-import syntax for CommonJS modules
+
+    // Paths
+    "rootDir": "./src", // source root — keeps dist/ mirror clean
+    "outDir": "./dist", // compiled output destination
+
+    // Emit
+    "declaration": true, // generate .d.ts files alongside JS
+    "declarationMap": true, // map .d.ts back to source for go-to-definition
+    "sourceMap": true, // map compiled JS back to TS for debuggers
+
+    // Type checking
+    "strict": true, // enables the full strict suite (noImplicitAny, strictNullChecks, etc.)
+    "noUncheckedIndexedAccess": true, // array/index access returns T | undefined, not just T
+    "noImplicitOverride": true, // subclass methods that override must use the override keyword
+    "noPropertyAccessFromIndexSignature": true, // force bracket notation on index-signature properties
+    "exactOptionalPropertyTypes": true, // { a?: string } rejects explicit undefined; must omit the key
+
+    // Interop
+    "skipLibCheck": true, // skip type-checking .d.ts files in node_modules (faster, avoids upstream bugs)
+    "forceConsistentCasingInFileNames": true // catch case-insensitive import mismatches on Mac/Windows
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "examples"]
+}
