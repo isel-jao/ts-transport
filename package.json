@@ -1,13 +1,31 @@
 {
   "name": "@isel-jao/ts-transport",
   "version": "0.1.0",
+  "description": "Unified Server/Client/Connection API over TCP and WebSocket",
+  "keywords": ["tcp", "websocket", "transport", "typescript"],
+  "license": "MIT",
+  "author": "issam el jaouhary <iseljao89@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/isel-jao/ts-transport.git"
+  },
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "files": [
     "dist",
-    "package.json"
+    "package.json",
+    "README.md"
   ],
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "build": "tsc",
     "lint": "eslint src",

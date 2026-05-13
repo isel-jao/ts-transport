@@ -5,7 +5,7 @@ A transport abstraction layer for Node.js. The same `Server`/`Client` API works 
 ## Installation
 
 ```bash
-pnpm add ts-transport
+pnpm add @isel-jao/ts-transport
 ```
 
 ## Quick start
